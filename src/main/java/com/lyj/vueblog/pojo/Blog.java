@@ -54,6 +54,7 @@ public class Blog implements Serializable {
     /**
      * 内容
      */
+    @NotBlank(message = "内容不能为空")
     private String content;
 
     /**

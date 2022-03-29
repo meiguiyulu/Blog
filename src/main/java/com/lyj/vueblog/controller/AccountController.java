@@ -9,6 +9,7 @@ import com.lyj.vueblog.pojo.User;
 import com.lyj.vueblog.service.IUserService;
 import com.lyj.vueblog.utils.JwtUtils;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
@@ -58,6 +59,7 @@ public class AccountController {
      * 退出登录
      * @return
      */
+    @RequiresAuthentication // 登录以后才能操作
     @GetMapping("/logout")
     public Result logout() {
         SecurityUtils.getSubject().logout();
