@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.io.IOException;
+
 @Slf4j
 @RestControllerAdvice
 public class GlobalException {
@@ -42,5 +44,13 @@ public class GlobalException {
 
     }
 
-
+    /**
+     * 处理Assert的异常
+     */
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(value = IllegalArgumentException.class)
+    public Result handler(IllegalArgumentException e) throws IOException {
+        log.error("Assert异常:-------------->{}", e.getMessage());
+        return Result.fail(e.getMessage());
+    }
 }
