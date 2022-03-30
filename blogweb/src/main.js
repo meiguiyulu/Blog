@@ -11,6 +11,8 @@ import 'mavon-editor/dist/css/index.css'
 
 import './axios'
 
+import './permission'
+
 
 Vue.config.productionTip = false
 
@@ -19,7 +21,7 @@ Vue.prototype.$axios = Axios
 Vue.use(mavonEditor)
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')
