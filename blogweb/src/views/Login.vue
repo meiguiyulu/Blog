@@ -7,9 +7,8 @@
       <el-header>
                
         <router-link to="/blogs">
-                  <img src="https://www.markerhub.com/dist/images/logo/markerhub-logo.png"
+                  <img src="https://c.wallhere.com/images/fa/6a/d45cc39d45f258beb8bdc92fc6ad-1505361.png!d"
                        style="height: 60%; margin-top: 10px;">
-                 
         </router-link>
              
       </el-header>
@@ -99,7 +98,7 @@ export default {
   mounted() {
     this.$notify({
       title: '看这里：',
-      message: '关注公众号：MarkerHub，回复【vueblog】，领取项目资料与源码',
+      message: '认真学习，第一个前后端分离系统',
       duration: 1500
     });
   }
