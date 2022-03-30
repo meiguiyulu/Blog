@@ -60,7 +60,6 @@ public class User implements Serializable {
     /**
      * 状态
      */
-    @NotBlank(message = "状态不能为空")
     private Integer status;
 
     /**

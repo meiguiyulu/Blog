@@ -38,7 +38,6 @@ public class Blog implements Serializable {
     /**
      * 作者id
      */
-    @NotBlank(message = "作者Id不能为空")
     private Long userId;
 
     /**
@@ -62,7 +61,6 @@ public class Blog implements Serializable {
     /**
      * 创建时间
      */
-    @NotBlank(message = "创建时间不能为空")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date created;
 
@@ -79,7 +77,6 @@ public class Blog implements Serializable {
     /**
      * 阅读量
      */
-    @NotBlank(message = "阅读量不能为空")
     private Integer views;
 
 
