@@ -1,6 +1,6 @@
 <template>
   <div class="m-content">
-    <h3>欢迎来到MarkerHub的博客</h3>
+    <h3>欢迎来到云小杰的博客</h3>
     <div class="block">
       <el-avatar :size="50" :src="user.avatar"></el-avatar>
       <div>{{ user.username }}</div>
@@ -50,7 +50,7 @@ export default {
     }
   },
   created() {
-    if(this.$store.getters.getUser.username) {
+    if (this.$store.getters.getUser.username) {
       this.user.username = this.$store.getters.getUser.username
       this.user.avatar = this.$store.getters.getUser.avatar
       this.hasLogin = true
@@ -58,3 +58,14 @@ export default {
   }
 }
 </script>
+<style scoped>
+.m-content {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.maction {
+  margin: 10px 0;
+}
+</style>
